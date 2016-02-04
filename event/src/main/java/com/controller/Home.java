@@ -1,0 +1,29 @@
+package com.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static spark.Spark.*;
+import static spark.Spark.staticFileLocation;
+import com.template.jade.JadeTemplateEngine;
+import spark.ModelAndView;
+
+import com.libraries.Connection;
+
+@SuppressWarnings("unused")
+public class Home {
+	public static void main(String[] args) {
+		/* Only Print Database In Log */
+		Connection conn = new Connection();
+		conn.main(null);
+		Map<String, String> map = new HashMap<>();
+        map.put("message", "Prakasa");
+        
+        staticFileLocation("/assets");
+        
+        // The hello.jade template file is in the resources/templates directory
+        get("/", (request, response) -> new ModelAndView(map, "home"), new JadeTemplateEngine());
+
+        get("/contact", (request, response) -> new ModelAndView(map, "hello"), new JadeTemplateEngine());
+    }
+}
