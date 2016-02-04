@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.template.jade.JadeTemplateEngine"/>
+<fullyQualifiedTypeName name="spark.TemplateEngine"/>
+<fullyQualifiedTypeName name="spark.ModelAndView"/>
+<fullyQualifiedTypeName name="com.libraries.Connection"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="com.libraries.MyslqConnection"/>
+</qualifiedTypeNameHistroy>

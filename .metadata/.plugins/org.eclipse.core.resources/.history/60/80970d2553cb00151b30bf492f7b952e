@@ -1,0 +1,51 @@
+package com.libraries;
+
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class MyslqConnection {
+	/*
+	 * [2/4/16, 8:20 PM] IP: 128.199.93.137
+	 * [2/4/16, 8:20 PM] DB : ARIVIN
+	 * [2/4/16, 8:33 PM] Username : ARIVIN
+	 * [2/4/16, 8:34 PM] Password : Pantek123
+	 * [2/4/16, 8:34 PM] Port: 1521
+	 * [2/4/16, 8:34 PM] Service : XE
+	 * [2/4/16, 8:34 PM] Used : Navicat/Toad
+	*/
+	static final String URL = "jdbc:mysql://localhost:3306/nodejs";; // "jdbc:oracle:thin:@128.199.93.137:1521:navicat";
+	static final String USER = "root";
+	static final String PASS = "tubokarto1904";
+	
+	public static void main(String[] argv) {
+
+		System.out.println("-------- MySQL JDBC Connection Testing ------------");
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			System.out.println("Where is your MySQL JDBC Driver?");
+			e.printStackTrace();
+			return;
+		}
+
+		System.out.println("MySQL JDBC Driver Registered!");
+		
+		Connection connection = null;
+		try {
+			connection = DriverManager.getConnection(URL, USER, PASS);
+
+		} catch (SQLException e) {
+			System.out.println("Connection Failed! Check output console");
+			e.printStackTrace();
+			return;
+		}
+
+		if (connection != null) {
+			System.out.println("You made it, take control your database now!");
+		} else {
+			System.out.println("Failed to make connection!");
+		}
+	}
+}

@@ -1,0 +1,14 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/css/bootstrap.css')
+		link(rel='stylesheet', href='/css/small-business.css')
+	body
+		p The message is: #{message}
+		script(src='/js/jquery-1.11.3.min.js')
+		script(src='/js/bootstrap.js')
+		
+extends layout
+
+block content

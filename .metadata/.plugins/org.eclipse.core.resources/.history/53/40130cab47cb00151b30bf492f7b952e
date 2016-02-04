@@ -1,0 +1,11 @@
+package com.libraries;
+
+import java.sql.* ;  // for standard JDBC programs
+import java.math.* ; // for BigDecimal and BigInteger support
+
+public class Connection {
+	String URL = "jdbc:oracle:thin:@amrood:1521:EMP";
+	String USER = "username";
+	String PASS = "password";
+	Connection conn = DriverManager.getConnection(URL, USER, PASS);
+}

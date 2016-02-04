@@ -1,0 +1,11 @@
+package com.controller;
+
+import static spark.Spark.get;
+
+public class Home {
+	public static void main(String[] args) {
+        get("/", (request, response) -> "Home Page");
+        
+        get("/contact", (request, response) -> "Contact Page");
+    }
+}

@@ -8,13 +8,13 @@ import static spark.Spark.staticFileLocation;
 import com.template.jade.JadeTemplateEngine;
 import spark.ModelAndView;
 
-import com.libraries.Connection;
+import com.libraries.MyslqConnection;
 
 @SuppressWarnings("unused")
 public class Home {
 	public static void main(String[] args) {
 		/* Only Print Database In Log */
-		Connection conn = new Connection();
+		MyslqConnection conn = new MyslqConnection();
 		conn.main(null);
 		Map<String, String> map = new HashMap<>();
         map.put("message", "Prakasa");
